@@ -3,14 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "node server.js",
     "lint": "next lint"
-  },
-  "engines": {
-    "npm": "6.x",
-    "node": "16.x"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

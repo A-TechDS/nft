@@ -1,17 +1,53 @@
+// import React from 'react';
+// import { useRouter } from 'next/router';
+
+
+// import {
+//     nftaddress, nftmarketaddress
+// } from '../../config'
+
+
+// // import {
+// //   nftaddress, nftmarketaddress
+// // } from '../../config'
+
+// import NFT from '../../artifacts/contracts/NFT.sol/NFT.json'
+// import Market from '../../artifacts/contracts/Market.sol/NFTMarket.json'
+
+
+// export default function ProductScreen() {
+   
+
+//     const [nfts, setNfts] = useState([])
+//   const [loadingState, setLoadingState] = useState('not-loaded')
+
+//     const router = useRouter();
+//     const { itemId }
+    
+    
+//     return (
+//         <div>
+            
+//         </div>
+//     )
+// }
+
+
+
+
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
-import Image from 'next/image'
 
 // import NextLink from 'next/link'
 
 import {
   nftaddress, nftmarketaddress
-} from '../config'
+} from '../../config'
 
-import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import NFT from '../../artifacts/contracts/NFT.sol/NFT.json'
+import Market from '../../artifacts/contracts/Market.sol/NFTMarket.json'
 
 let rpcEndpoint = null
 
@@ -19,7 +55,7 @@ if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
   rpcEndpoint = process.env.NEXT_PUBLIC_WORKSPACE_URL
 }
 
-export default function Home() {
+export default function ProductScreen() {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
   useEffect(() => {
@@ -73,7 +109,7 @@ export default function Home() {
             nfts.map((nft, i) => (
               <a href={`/product/${nft.itemId}`}>
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <Image src={nft.image} />
+                <img src={nft.image} />
                 <div className="p-4">
                   <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
                   <div style={{ height: '70px', overflow: 'hidden' }}>
