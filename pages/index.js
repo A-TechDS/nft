@@ -86,7 +86,7 @@ export default function Home() {
                   <button className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
                 </div>
               </div>
-              </a>
+              // </a>
             ))
           } 
           </div>
