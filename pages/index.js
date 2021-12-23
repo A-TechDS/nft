@@ -71,7 +71,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
            {
             nfts.map((nft, i) => (
-              <a href={`/product/${nft.itemId}`}>
+              // <a href={`/product/${nft.itemId}`}>
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <Image src={nft.image} alt="" />
                 <div className="p-4">
